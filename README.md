@@ -79,7 +79,7 @@ Password as Hex:
 0d
 ```
 
-Filtering the password: if `7f` is `DEL` and `0D` is `CR` the password will be `66 74 5F 77 61 4E 44 52 65 4C 30 4C` taking only printable characters.
+Filtering the password: if `7f` is `DEL` and `0D` is `CR` the password will be `66 74 5F 77 61 4E 44 52 65 4C 30 4C`.
 
 Password for flag02: `ft_waNDReL0L`
 
