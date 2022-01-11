@@ -277,3 +277,7 @@ python3 exploit.py 2>/dev/null
 Password for flag09: `f3iji1ju5yuevaus41q1afiuq`
 
 Flag: `s5cAJpM8ev6XHw998pRWG728z`
+
+# Bonus??
+
+Soon..
