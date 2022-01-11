@@ -244,4 +244,6 @@ Exploit:
 ln -s /home/user/level08/token /tmp/haha && ./level08 /tmp/haha
 ```
 
-Flag: `quif5eloekouj29ke0vouxean`
+Password for flag08: `quif5eloekouj29ke0vouxean`
+
+Flag: `25749xKZ8L7DkSCwJkT9dyv6f`
