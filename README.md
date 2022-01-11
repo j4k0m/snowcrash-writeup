@@ -58,27 +58,7 @@ TCP Stream:
 Password as Hex:
 
 ```
-66
-74
-5f
-77
-61
-6e
-64
-72
-7f
-7f
-7f
-4e
-44
-52
-65
-6c
-7f
-4c
-30
-4c
-0d
+66 74 5f 77 61 6e 64 72 7f 7f 7f 4e 44 52 65 6c 7f 4c 30 4c 0d
 ```
 
 Filtering the password: if `7f` is `DEL` and `0D` is `CR` the password will be `66 74 5F 77 61 4E 44 52 65 4C 30 4C`.
