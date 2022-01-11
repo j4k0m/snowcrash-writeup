@@ -221,3 +221,17 @@ export LOGNAME='""; getflag' && ./level07
 ```
 
 Flag: `fiumuikeil55xe9cu4dood66h`
+
+## Level08:
+
+```bash
+level08@SnowCrash:~$ ls -l
+total 16
+-rwsr-s---+ 1 flag08 level08 8617 Mar  5  2016 level08
+-rw-------  1 flag08 flag08    26 Mar  5  2016 token
+level08@SnowCrash:~$
+```
+
+Level08 disassembled:
+
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/48088579/148987582-6afaf0c7-cd4f-4975-bf56-f6c44a412473.png">
