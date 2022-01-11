@@ -14,4 +14,6 @@ ROT11:
 
 <img width="489" alt="image" src="https://user-images.githubusercontent.com/48088579/148955037-fe8cbff0-538f-4c38-b254-9c58efa00a20.png">
 
-Flag: `nottoohardhere`
+Password for flag00: `nottoohardhere`
+
+Flag: `x24ti5gi3x0ol2eh4esiuxias`
