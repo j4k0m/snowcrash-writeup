@@ -187,4 +187,4 @@ print $r;
 
 Binary disassembled:
 
-<img width="543" alt="image" src="https://user-images.githubusercontent.com/48088579/148983170-26af4ba4-9126-443a-a68c-77c027864ce4.png">
+<img width="523" alt="image" src="https://user-images.githubusercontent.com/48088579/148983240-a24822e3-b1df-4019-8660-50d36d4857df.png">
