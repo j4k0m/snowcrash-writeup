@@ -48,3 +48,40 @@ total 12
 ----r--r-- 1 flag02 level02 8302 Aug 30  2015 level02.pcap
 level02@SnowCrash:~$
 ```
+
+TCP Stream:
+
+<img width="691" alt="image" src="https://user-images.githubusercontent.com/48088579/148960536-2c6ce7ee-c4f2-4c5a-a2b9-9eceafa8bb38.png">
+
+Password as Hex:
+
+```
+66
+74
+5f
+77
+61
+6e
+64
+72
+7f
+7f
+7f
+4e
+44
+52
+65
+6c
+7f
+4c
+30
+4c
+0d
+```
+
+Filtering the password: if `7f` is `DEL` and `0D` is `CR` the password will be `66 74 5F 77 61 4E 44 52 65 4C 30 4C` taking only printable characters.
+
+Password for flag02: `ft_waNDReL0L`
+
+Flag: `kooda2puivaav1idi4f57q8iq`
+
