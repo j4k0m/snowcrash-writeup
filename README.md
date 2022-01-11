@@ -40,3 +40,11 @@ Session completed
 Password for flag01: `abcdefg`
 
 Flag: `f2av5il02puano7naaf6adaaf`
+
+## Level02:
+```bash
+level02@SnowCrash:~$ ls -l
+total 12
+----r--r-- 1 flag02 level02 8302 Aug 30  2015 level02.pcap
+level02@SnowCrash:~$
+```
