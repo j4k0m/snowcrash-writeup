@@ -247,3 +247,13 @@ ln -s /home/user/level08/token /tmp/haha && ./level08 /tmp/haha
 Password for flag08: `quif5eloekouj29ke0vouxean`
 
 Flag: `25749xKZ8L7DkSCwJkT9dyv6f`
+
+## Level09:
+
+```bash
+level09@SnowCrash:~$ ls -l
+total 12
+-rwsr-sr-x 1 flag09 level09 7640 Mar  5  2016 level09
+----r--r-- 1 flag09 level09   26 Mar  5  2016 token
+level09@SnowCrash:~$
+```
