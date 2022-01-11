@@ -151,3 +151,40 @@ echo "getflag > /opt/openarenaserver/flag" > /opt/openarenaserver/exploit && chm
 ```
 
 Flag: `viuaaale9huek52boumoomioc`
+
+## Level06:
+
+```bash
+level06@SnowCrash:~$ ls -l
+total 12
+-rwsr-x---+ 1 flag06 level06 7503 Aug 30  2015 level06
+-rwxr-x---  1 flag06 level06  356 Mar  5  2016 level06.php
+level06@SnowCrash:~$
+```
+
+Level06.php:
+
+```php
+<?php
+function y($m)
+{
+    $m = preg_replace("/\./", " x ", $m);
+    $m = preg_replace("/@/", " y", $m);
+    return $m;
+}
+function x($y, $z)
+{
+    $a = file_get_contents($y);
+    $a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);
+    $a = preg_replace("/\[/", "(", $a);
+    $a = preg_replace("/\]/", ")", $a);
+    return $a;
+}
+$r = x($argv[1], $argv[2]);
+print $r;
+?>
+```
+
+Binary disassembled:
+
+<img width="543" alt="image" src="https://user-images.githubusercontent.com/48088579/148983170-26af4ba4-9126-443a-a68c-77c027864ce4.png">
