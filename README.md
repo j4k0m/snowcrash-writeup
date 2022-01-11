@@ -10,6 +10,7 @@ level00@SnowCrash:~$ cat /usr/sbin/john
 cdiiddwpgswtgt
 level00@SnowCrash:~$
 ```
-ROT11: <img width="489" alt="image" src="https://user-images.githubusercontent.com/48088579/148955037-fe8cbff0-538f-4c38-b254-9c58efa00a20.png">
+ROT11: 
+<img width="489" alt="image" src="https://user-images.githubusercontent.com/48088579/148955037-fe8cbff0-538f-4c38-b254-9c58efa00a20.png">
 
 Flag: `nottoohardhere`
