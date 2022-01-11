@@ -2,10 +2,10 @@
 This project aims to make you discover, through several little challenges, cyber security in various fields.
 
 ## Level00:
-```
+```bash
 level00@SnowCrash:~$ ls -l /usr/sbin/ | grep flag00
 ```
-```
+```bash
 level00@SnowCrash:~$ cat /usr/sbin/john
 cdiiddwpgswtgt
 level00@SnowCrash:~$
@@ -17,3 +17,25 @@ ROT11:
 Password for flag00: `nottoohardhere`
 
 Flag: `x24ti5gi3x0ol2eh4esiuxias`
+
+## Level01:
+```bash
+level01@SnowCrash:~$ cat /etc/passwd
+...
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+...
+```
+```bash
+➜  ~ echo "42hDRfypTqqnw" > hash && john hash
+Loaded 1 password hash (descrypt, traditional crypt(3) [DES 128/128 SSE2-16])
+Press 'q' or Ctrl-C to abort, almost any other key for status
+abcdefg          (?)
+1g 0:00:00:00 100% 2/3 33.33g/s 25600p/s 25600c/s 25600C/s raquel..bigman
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+➜  ~
+```
+
+Password for flag01: `abcdefg`
+
+Flag: `f2av5il02puano7naaf6adaaf`
