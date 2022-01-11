@@ -257,3 +257,17 @@ total 12
 ----r--r-- 1 flag09 level09   26 Mar  5  2016 token
 level09@SnowCrash:~$
 ```
+
+Exploit:
+
+```python
+with open("./token", "rb") as file:
+    token = file.read()
+
+for i in range(len(token)):
+    print(chr(token[i] - i), end="")
+```
+
+Password for flag09: `f3iji1ju5yuevaus41q1afiuq`
+
+Flag: `s5cAJpM8ev6XHw998pRWG728z`
