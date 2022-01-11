@@ -131,4 +131,4 @@ sub x {
 x(param("x"));
 ```
 
-Vulnerability: Command injection in `print ``echo $y 2>&1``;`
+Vulnerability: Command injection in ```print `echo $y 2>&1`;```
