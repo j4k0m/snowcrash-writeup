@@ -4,6 +4,7 @@ This project aims to make you discover, through several little challenges, cyber
 ## Level00:
 ```bash
 level00@SnowCrash:~$ ls -l /usr/sbin/ | grep flag00
+----r--r--  1 flag00  flag00      15 Mar  5  2016 john
 ```
 ```bash
 level00@SnowCrash:~$ cat /usr/sbin/john
