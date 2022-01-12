@@ -291,6 +291,7 @@ level10@SnowCrash:~$
 ```
 
 Level10 dissambled:
+
 ![image](https://user-images.githubusercontent.com/48088579/149225798-4e40db94-72e9-43b1-8b60-031b749727c4.png)
 
 It appears that the program does not have any problem at the first look. However, there is a race condition vulnerability in this program: due to the window (the simulated delay) between the check (`access`)
